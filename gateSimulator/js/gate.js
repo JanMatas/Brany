@@ -14,6 +14,12 @@ function connect() {
 
 function onConnect() {
     setStatus('connected');
+    ws.addEventListener('message', onMessage);
+    ws.send(JSON.stringify({type:'HANDSHAKE', id:1}));
+}
+
+function onMessage(msg) {
+    console.log(msg.data);
 }
 
 function onClose() {
