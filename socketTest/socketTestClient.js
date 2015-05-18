@@ -39,7 +39,12 @@ setTimeout(initPoll, 1000);
 function initPoll() {
     setInterval(function() {
         if (ws) {
-            switch (ws.readyState) {
+            ws.send('ping', function(err) {
+                if (err) {
+                    connect();
+                }
+            });
+           /* switch (ws.readyState) {
                 case 0:
                     // CONNECTING
                     //Give it some more time
@@ -62,7 +67,9 @@ function initPoll() {
                     connect();
                     break;
 
-            }
+            }*/
+        } else {
+            connect();
         }
 
 

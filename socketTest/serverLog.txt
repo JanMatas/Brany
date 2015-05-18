@@ -1,14 +1,7 @@
-Client connected at 2015:05:18:23:52:04
 
-Disconnected at 2015:05:18:23:52:57
+Client connected at 2015:05:19:00:05:56
 
-Ping failed at 2015:05:18:23:52:59
+Disconnected at 2015:05:19:00:06:34
 
-Client connected at 2015:05:18:23:56:29
-
-Disconnected at 2015:05:18:23:57:12
-
-Ping failed at 2015:05:18:23:57:14
-
-Client connected at 2015:05:18:23:57:40
+Ping failed at 2015:05:19:00:06:36
 
