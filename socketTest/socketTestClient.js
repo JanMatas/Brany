@@ -86,7 +86,7 @@ function onOpen() {
 function onClose() {
     log('disconnected at: ' + getDateTime() + '...trying to reconnect...');
 
-    connect();
+    //connect();
 }
 
 
