@@ -29,6 +29,40 @@ function connect() {
 
 
 
+    function setCheck() {
+        setTimeout(function() {
+            if (ws) {
+                switch (ws.readyState) {
+                    case 0:
+                        // CONNECTING
+                        setCheck(); // Give it some more time
+                        break;
+
+                    case 1:
+                        // OPEN - we are done!
+                        // Do nothing because we are finally connected
+                        break;
+
+                    case 2:
+                        // CLOSING
+                        // Try and reconnect
+                        connect();
+                        break;
+
+                    case 3:
+                        // CLOSED
+                        // Try and reconnect
+                        connect();
+                        break;
+
+                }
+            }
+
+
+        }, 3000);
+    }
+
+
 }
 
 function onError(err) {
